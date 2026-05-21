@@ -20,7 +20,7 @@ click the create copy user name of
 username : roshangupta10072004_db_user
 password : TqH15sjTrsupQxIt
 after click the create database user
-go into network acess and click on add ip address 0.0.0.0/0
+go into network acess and click on add ip address or enter 0.0.0.0/0
 go to your project hit on the get connection string and set {driver:Python , version:3.11 or later}
 copy use the connection :
 mongodb+srv://roshangupta10072004_db_user:<db_password>@cluster0.ejvngs2.mongodb.net/?appName=Cluster0
@@ -31,7 +31,7 @@ create file "mangoDB_demo.ipynb" >> select kernal>python kernal>vehicles>>
 push your data to mango database from your python notebook.
 got to maongoDB Altas >> Database >> browse collection >> see oyur data in key value format
 
---------------------------------logging ,exception and notebooks
+--------------------------------logging ,exception and notebooks--------------------------
 we first go into src then go into logger inside __init__.py add the code inside.
 to run the logger file and we use the use demo.py
 in terminal you write the python demo.py
@@ -39,6 +39,64 @@ after that automatically generate log file .
 same written the exception module go inside have __init__.py and add code
 for run again go into demo.py and paste code
 git add , git commit(logging and exception added) ,git push
+
+
+Add the code go to constant open __init__.py add code
+go into configuration mango_db_connection.py kar ek file hai and add code
+inside data_access open the proj1_data.py
+Inside the entity go into config_entiy.py and add code
+also open the artifact_entity.py only starting 4 line add code.
+Inside the components go to data ingestion and add code
+Inside Pipeline go into traning_pipeline.py only data ingestion doing first.
+open the demo.py 
+     
+
+ To setup the connection url on mac(also work for windows), open bash/powershell terminal and run below command:
+                        *** For Bash ***
+    set: export MONGODB_URL="mongodb+srv://<username>:<password>......"
+    check: echo $MONGODB_URL
+                        *** For Powershell ***
+    set: $env:MONGODB_URL = "$env:MONGODB_URL="mongodb+srv://roshangupta10072004_db_user:TqH15sjTrsupQxIt@cluster0.ejvngs2.mongodb.net/?appName=Cluster0"
+
+    check: echo $env:MONGODB_URL
+
+    To setup the connection url on Windows, open env variable setting option and add a new variable:
+    Name: MONGODB_URL, Value = <url>
+    Also add "artifact" dir to .gitignore file
+
+9.after that running automatically generate the artifact file (in this have features_store and inside ingested test and train.csv)
+
+10. again run the python demo.py you seen in artifact folder have 
+11.git add ., git commit,git push
+
+-------------------------------Data Validation----------------------------------------
+
+Inside the src go into utlis inside main_utlis.py add code inside them
+go inside the config open schema.yaml add the code
+Inside src go into config_entity.py  take datavalidation configuration part and paste
+again inside go to entity inside in artificant.py add the code part of data_ingestion.py
+Go inside components open data_validation the code 
+after that data validation we move on traning_pipeline.py add or active the data_validation part  and also add data validation part sir file
+after the run the demo.py create in artificat file inside inside them  make data_validation.py and open report.yaml
+-----------------------Data Transformation-------------------------------
+
+again going to data_transforamtion and add in config.entity.py and simailarly add the code in the artifact
+go  data_transformation.py add the code
+again going to training.pipeline.py comment out the transformation in pipeline
+go to pipeline add the code inside them.
+then run in python demo.py
+
+----------------------------------Model traniner-------------------------------
+
+Pehle constant me jao useme model_traner nam ka sab kuch Banega
+config entites me aate hai add karte hai model traning ko
+ab humlog define karege artifacts ko artifact me and modeltraning ko bhi add kardenge
+after that move into model traniner and add code in compenets
+also add the code in estimator.py
+then go model_traning.py comment out model_traning
+pipeline me jakar model_traning.py me model_trainer ko lana hai
+again we go into demo.py run it.
+
 
 
 
