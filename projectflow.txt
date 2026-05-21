@@ -1,0 +1,44 @@
+create project template by executing template.py file
+run this file after that you see many other file automatically create.
+write the code on setup.py and pyproject.toml 
+if not use conda environment you detete it bcz occupy more space.
+if we want to delete conda library : conda env remove -n mlops
+create virtual env , activate it and install the requirements from requirements.txt
+conda create -n vehicle python=3.10 -y
+add required modules to requirements.txt
+before pip install you see the pip list "pip install -r requirements.txt
+
+6.Do a pip list on terminal to make sure you have packages installed.
+7.pip list --> what is doing in backend
+
+
+
+mango DB:
+first sign up mango db and also for security perpose set orgiantion with email
+choose M0 is free 
+click the create copy user name of 
+username : roshangupta10072004_db_user
+password : TqH15sjTrsupQxIt
+after click the create database user
+go into network acess and click on add ip address 0.0.0.0/0
+go to your project hit on the get connection string and set {driver:Python , version:3.11 or later}
+copy use the connection :
+mongodb+srv://roshangupta10072004_db_user:<db_password>@cluster0.ejvngs2.mongodb.net/?appName=Cluster0
+create a crashcourse.txt
+git add , git commit (project structure ready,venv set),git push
+create folder "notebook" and dataset added to notebook folder
+create file "mangoDB_demo.ipynb" >> select kernal>python kernal>vehicles>>
+push your data to mango database from your python notebook.
+got to maongoDB Altas >> Database >> browse collection >> see oyur data in key value format
+
+--------------------------------logging ,exception and notebooks
+we first go into src then go into logger inside __init__.py add the code inside.
+to run the logger file and we use the use demo.py
+in terminal you write the python demo.py
+after that automatically generate log file .
+same written the exception module go inside have __init__.py and add code
+for run again go into demo.py and paste code
+git add , git commit(logging and exception added) ,git push
+
+
+
